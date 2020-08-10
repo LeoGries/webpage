@@ -1,45 +1,82 @@
 body {color: black; background-color: white;}
 
-#navigation {
-  list-style-type: none;
-  margin-right: 0;
-  padding: 0;
-}
+.stage { position: relative; }
 
+.stage img { display: block;}
 
-.dropdown {
+.stage .navbar {
 	position: absolute;
-	display: inline-block;
-	right: 2%;
-	top: 4%;
+	top:0%;
+	right:0%;
+	width: auto;
+	background-color: rgb(176, 224, 230, 0.6);
+	
 }
 
-.dropdown-content {
+.stage .navbar a{
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 35px 50px;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.stage .navbar .dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.stage .navbar .dropbtn {
+	font-size: 20px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 35px 50px;
+	background-color: inherit;
+	font-family: inherit; /* Important for vertical align on mobile phones */
+	margin: 0;
+}
+
+.stage .navbar a:hover, .dropdown:hover .dropbtn{
+  background-color: rgb(176, 224, 230, 1);
+}
+	
+
+
+.stage .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  right:0;
+  background-color: rgb(176, 224, 230, 0.6);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.stage .navbar .dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.stage .navbar .dropdown-content a:hover {
+  background-color: rgb(176, 224, 230);
+}
+
+/* Show the dropdown menu on hover */
+.stage .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content a { color: black;
-					  padding: 12px 16px;
-					  text-decoration: none;
-					  display: block}
 
 
-.dropdown-content a:hover {  background-color: #B0E0E6;}
-
-.stage { position: relative; }
-
-.stage img { display: block;}
-
+a.active {
+  background-color: rgb(176, 224, 230);
+}
 
 .stage span{
 	  position: absolute;
@@ -77,12 +114,34 @@ h1 {text-align: center; color: #000000;}
 h2 {text-align: center; font-style: italic; color: #B0E0E6} 
 
 
-p {font-family: verdana;  font-size: 15px;}
+p {font-family: verdana;  font-size: 15px; padding-bottom: 2500px}
 
 #menü { display: block; }
 		
 #stage { display: block;
 	width: 100%;
 	margin-left: auto;
-	margin-right: auto;}
+	margin-right: auto;
+	}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(176, 224, 230, 0.6); /* Set a background color */
+  color: black; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  font-weight: bold;
+}
+
+#myBtn:hover {
+  background-color: rgb(176, 224, 230); /* Add a dark-grey background on hover */
+}
 	
