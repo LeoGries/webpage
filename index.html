@@ -7,22 +7,32 @@
     <title> Dr. K.S. Georg </title>
   </head>
   <body>
-		
-	<div class="stage">
-	<img id="stage" src="Kerstin_lang.jpg" alt="development">	
-    <span> Dr. Kerstin Sabine Georg </span>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">
+	<svg width="1.0em" height="1.0em" viewBox="0 0 16 16" class="bi bi-chevron-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+	</svg></button> 
 	
-		<div class = "dropdown">
-			<picture>
-				<source id="menü" srcset="burgermenu_small.png" alt="Bürgermenü">
-				<img id="menü" src = "burgermenu_small.png" alt="Bürger">
-			</picture>
-			<div class = "dropdown-content">
-				<a href="index.html">Home</a>
-				<a href="work.html">Work</a>
-				<a href="contact.html">Contact</a>
-				<a href="about.html">About</a>
+	<div class="stage">
+	<img id="stage" src="BildPersonextrahiert.jpg" alt="development">	
+    <span> Dr. Kerstin Sabine Georg </span>
+		<div class="container"> 
+		<div class ="navbar">
+			<a class="active" href="index.html">Home</a>
+			 <div class="dropdown">
+				<button class="dropbtn">Leistungsangebote
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="beratung.html">Beratung</a>
+				  <a href="coaching.html">Coaching</a>
+				  <a href="fortbildung.html">Forbildung</a>
+				  <a href="vorträge.html">Vorträge</a>
+				</div>
 			</div>
+			<a href="vita.html">Vita</a>
+			<a href="published.html">Veröffentlichung</a>
+			<a href="contact.html">Kontakt</a>
+		</div>
 		</div>
 	</div>
 	
@@ -33,7 +43,29 @@
     
       
           
-          <p> Das ist ein Button  <button>Click me</button> </p>
+          <p> Das ist ein Button  <button>Click me</button>		  </p>
+  
+  
+  
+	<script>
+
+	var mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+	</script>
   
   </body>
 </html>
