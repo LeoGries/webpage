@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mystyle.css">
+	<script src="webpageScript.js"></script>
     
     <title> Dr. K.S. Georg </title>
   </head>
@@ -12,19 +13,15 @@
 		<path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
 	</svg></button> 
 	
-	<div class="stage">
-	<img id="stage" src="BildPersonextrahiert.jpg" alt="development">	
-    <span> Dr. Kerstin Sabine Georg </span>
-		<div class="container"> 
-		<div class ="navbar">
+	
+	<div class="container"> 
+		<div class ="navbar" id="myTopnav">
 			<a class="active" href="index.html">Home</a>
-			 <div class="dropdown">
-				<button class="dropbtn">Leistungsangebote
-				  <i class="fa fa-caret-down"></i>
-				</button>
+			<div class="dropdown">
+				<button class="dropbtn">Leistungsangebote</button>
 				<div class="dropdown-content">
 				  <a href="beratung.html">Beratung</a>
-				  <a href="coaching.html">Coaching</a>
+				  <a href="coaching.php">Coaching</a>
 				  <a href="fortbildung.html">Forbildung</a>
 				  <a href="vorträge.html">Vorträge</a>
 				</div>
@@ -32,8 +29,20 @@
 			<a href="vita.html">Vita</a>
 			<a href="published.html">Veröffentlichung</a>
 			<a href="contact.html">Kontakt</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction(this)">
+				<i class="fa fa-bars"> 
+					  <div class="bar1"></div>
+					  <div class="bar2"></div>
+					  <div class="bar3"></div>
+				</i>
+			</a>
 		</div>
-		</div>
+	</div>
+	
+	<div class="stage">
+		<img id="stage" src="KerstinStage.jpg" alt="development">	
+    <span> Dr. Kerstin Sabine Georg </span>
+		
 	</div>
 	
     <h2> Hier muss ein Zitat hin. </h3>
@@ -41,10 +50,42 @@
     <p> Warum dauert das so lange? Dies ist ein Paragraph in welchem ein längerer Text stehen kann. 
       <a href="https://leogries.github.io/webpage/contact">Hier</a> gehts zur Kontaktseite </p>
     
-      
-          
-          <p> Das ist ein Button  <button>Click me</button>		  </p>
+	<p>Hover over the image to see the effect.</p>
+	<div class="containerBigOverview">
+		<p id="übersicht"> Leistungsangebote </p>
+		<div class="containerOverview" >
+		<a href='beratung.html'><img src="fortbildung1.jpg" alt="Forbildung1" class="image">
+		  <div class="overlay">
+			<div class="text">Beratung</div>
+		  </div>
+		</div>
+		<div class="containerOverview">
+		<a href='coaching.html'><img src="fortbildung1.jpg" alt="Forbildung2" class="image">
+		  <div class="overlay">
+			<div class="text">Coaching</div>
+		  </div>
+		</div>
+		<div class="containerOverview">
+		<a href='fortbildung.html'><img src="fortbildung1.jpg" alt="Forbildung3" class="image">
+		  <div class="overlay">
+			<div class="text">Fortbildungen</div>
+		  </div>
+		</div>
+		<div class="containerOverview">
+		 <a href='vorträge.html'><img src="fortbildung1.jpg" alt="Forbildung3" class="image">
+		  <div class="overlay">
+			<div class="text">Vorträge</div>
+		  </div>
+		</div>
+	</div>
+	
+<footer>
+	<a href="impressum.html"> Impressum </a>
+	<a href="datenschutz.html"> Datenschutz </a>
+</footer>
   
+  
+	
   
   
 	<script>
@@ -65,6 +106,18 @@
 	  document.body.scrollTop = 0;
 	  document.documentElement.scrollTop = 0;
 	}
+	
+	function myFunction(y) {
+	  var x = document.getElementById("myTopnav"); 
+		y.classList.toggle("change");
+	  if (x.className === "navbar") {
+		x.className += " responsive";
+	  } else {
+		x.className = "navbar";
+	  }
+	}
+	
+	
 	</script>
   
   </body>
